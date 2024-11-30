@@ -48,11 +48,9 @@ A table that showcases the winners of the recent FIFA World Cup tournaments, inc
 
 Here are some visuals of the webpage:
 
-![Messi](images/messi.jpg)
-*Lionel Messi – The football legend.*
+![Sample1](images/sample1.jpg)
 
-![Stadium](images/cn.jpg)
-*Camp Nou – One of the largest football stadiums in Europe.*
+![Sample2](images/sample2.jpg)
 
 ---
 
