@@ -48,9 +48,9 @@ A table that showcases the winners of the recent FIFA World Cup tournaments, inc
 
 Here are some visuals of the webpage:
 
-![Sample1](images/sample1.jpg)
+![Sample1](images/sample1.png)
 
-![Sample2](images/sample2.jpg)
+![Sample2](images/sample2.png)
 
 ---
 
