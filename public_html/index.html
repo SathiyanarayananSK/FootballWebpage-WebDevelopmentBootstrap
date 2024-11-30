@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Football</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!--Instead of commenting every place I made changes, I am giving a brief on what I have changed. Because, commenting every line makes the submission really messy.
+        Firstly, in navbar, I have introducced a hamburger button to store all the navigation lists which was not done in the previous task. Inside the hamburger, I have also introduced a dropdown option for the page contents
+        On the right hand side, I have introduced an off canvas - About, which says some information about me and a few lines about the contents in this page
+        The next major change is the Beautiful stadiums cards. I have divided the page equally - 6 columns per card and then added images and content to it.
+        In the same cards, I have introduced collapse - Know more. By clicking this, the user can get more information about the respective stadiums.
+        Throughout this task, I made sure this website is responsive in all screen sizes-->
+
+    <nav class="navbar bg-dark navbar-dark py-1" id="nav_bar">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="btn btn-dark m-1 float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#about">About</button>
+        </div>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Contents</a>
+                    <ul class="dropdown-menu bg-dark">
+                        <li><a class="nav-link" href="#about">About</a></li>
+                        <li><a class="nav-link" href="#teams">Top Teams</a></li>
+                        <li><a class="nav-link" href="#players">Top Players</a></li>
+                        <li><a class="nav-link" href="#stadiums">Beautiful stadiums</a></li>
+                        <li><a class="nav-link" href="#winners">Recent world cup Winners</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank"
+                        href="https://bleacherreport.com/articles/1473059-20-reasons-why-world-football-is-the-best-sport-in-the-world">Why
+                        Football</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank"
+                        href="https://www.britannica.com/sports/football-soccer/Professionalism">History of football</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank"
+                        href="https://www.fourfourtwo.com/features/ranked-the-100-best-football-players-of-all-time/10">Greatest
+                        footbalers of all time</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank"
+                        href="https://bleacherreport.com/articles/1922780-statistically-ranking-the-worlds-top-10-football-leagues">Major
+                        Leagues</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank"
+                        href="https://khelnow.com/football/2023-04-world-football-greatest-managers-all-time-chatgpt">Greatest
+                        Managers of all time</a>
+                </li>
+            </ul>
+        </div>
+        <div class="offcanvas offcanvas-end text-bg-dark" id="about">
+            <div class="offcanvas-header">
+                <h3>About this site</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <h4>Owner</h4>
+                <p>Sathiyanarayanan Senthil kumar</p>
+                <p>Master of data Science</p>
+                <p>Deakin Uniersity</p>
+                <br>
+                <p>I am a big football enthusiast. This page is dedicated to football fans. It says a brief about football and lists some of my favourite players. This website also has information on 2 stadiums and recent world cup champions.</p>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <header class="container-fluid p-5 text-bg-dark text-center">
+        <h1>Football</h1>
+        <p>where passion and teamwork collide on the field</p>
+    </header>
+
+    <main>
+        <br>
+        <div class="container">
+            <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="images/slide1.jpg" alt="slide 1" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>Passion and Emotion</h3>
+                            <p>Football is not just a game, it's a way of life. The passion that fans bring to the
+                                stadium is what makes it truly beautiful.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="images/slide2.jpg" alt="slide 2" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>Unity and Community</h3>
+                            <p>In football, there's no distinction between rich and poor, old and young. The ball
+                                doesn't care how old you are or what you do for a living.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/slide3.jpg" alt="slide 3" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>Sportsmanship and Fair Play</h3>
+                            <p>You have to respect your opponents and work hard to earn respect in return. That's the
+                                spirit of the game.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="sr-only">Next</span>
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+
+
+
+        <br>
+        <div class="container" id="about">
+            <h2>About</h2>
+            <hr><br>
+            <img src="images/football.jpg" alt="Football" class="img-fluid rounded float-end" width="500" height="300">
+            <br>
+            <p>Association football, more commonly known as football or soccer, is a team sport played between two
+                teams
+                of 11 players each, who primarily use their feet to propel a ball around a rectangular field called a
+                pitch.
+                The objective of the game is to score more goals than the opposing team by moving the ball beyond the
+                goal
+                line into a rectangular-framed goal defended by the opposing team. Traditionally, the game has been
+                played
+                over two 45-minute halves, for a total match time of 90 minutes. With an estimated 250 million players
+                active in over 200 countries and territories, it is the world's most popular sport.</p>
+            <p>The game of association football is played in accordance with the Laws of the Game, a set of rules that
+                has
+                been in effect since 1863 and maintained by the IFAB since 1886. The game is played with a football that
+                is
+                68–70 cm (27–28 in) in circumference. The two teams compete to get the ball into the other team's goal
+                (between the posts and under the bar), thereby scoring a goal. When the ball is in play, the players
+                mainly
+                use their feet, but may use any other part of their body, except for their hands or arms, to control,
+                strike, or pass the ball. Only the goalkeepers may use their hands and arms, and only then within the
+                penalty area. The team that has scored more goals at the end of the game is the winner. Depending on the
+                format of the competition, an equal number of goals scored may result in a draw being declared, or the
+                game
+                goes into extra time or a penalty shootout.</p>
+            <p>Internationally, association football is governed by FIFA. Under FIFA, there are six continental
+                confederations: AFC, CAF, CONCACAF, CONMEBOL, OFC and UEFA. Of these confederations, CONMEBOL is the
+                oldest
+                one, being founded in 1916. National associations (e.g. The FA or JFA) are responsible for managing the
+                game
+                in their own countries both professionally and at an amateur level, and coordinating competitions in
+                accordance with the Laws of the Game. The most senior and prestigious international competitions are the
+                FIFA World Cup and the FIFA Women's World Cup. The men's World Cup is the most-viewed sporting event in
+                the
+                world, surpassing the Olympic Games.[6] The two most prestigious competitions in European club football
+                are
+                the UEFA Champions League and the UEFA Women's Champions League, which attract an extensive television
+                audience throughout the world. Since 2009, the final of the men's tournament has been the most-watched
+                annual sporting event in the world.</p>
+            <a class="text-decoration-none float-end" href="#nav_bar"><kbd>Go to top</kbd></a>
+        </div>
+
+        <br>
+
+        <div class="container" id="teams">
+            <h2>Top Teams</h2>
+            <hr><br>
+            <p>Football tournaments serve as exhilarating spectacles that unite fans from around the world in
+                celebration of
+                the beautiful game. These competitions, ranging from regional championships to global extravaganzas,
+                showcase the prowess of teams and players as they navigate the highs and lows of each match. With every
+                kick
+                of the ball, the anticipation and excitement build, as underdogs challenge established giants and
+                unpredictable twists redefine the course of the tournament. The electric atmosphere in stadiums and the
+                collective roar of supporters further amplify the drama, making football tournaments not only a
+                battleground
+                for athletic excellence but also a platform that transcends borders, cultures, and languages, embodying
+                the
+                universal spirit of competition and unity. Some of the top teams are:</p>
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <img src="images/fcb.jpg" alt="Barcelona" class="img-thumbnail">
+                </div>
+                <div class="col-md-4 col-12">
+                    <img src="images/rm.jpg" alt="Real Madrid" class="img-thumbnail">
+                </div>
+                <div class="col-md-4 col-12">
+                    <img src="images/manutd.jpg" alt="Manchester united" class="img-thumbnail">
+                </div>
+            </div>
+            <br>
+            <a class="text-decoration-none float-end" href="#nav_bar"><kbd>Go to top</kbd></a>
+        </div>
+        <br>
+        <div class="container" id="players">
+            <h2>Top Players</h2>
+            <hr><br>
+            <div class="container p-4 mb-4 bg-light rounded">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <img src="images/messi.jpg" alt="Messi" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-8 col-12">
+                        <p class="lead">Lionel Messi</p>
+                        <p class="small">Lionel Messi, the Argentine football virtuoso born on June 24, 1987, is an
+                            iconic figure in
+                            the world
+                            of
+                            soccer. Renowned for his extraordinary dribbling finesse, unparalleled playmaking vision,
+                            and
+                            prolific
+                            goal-scoring ability, Messi's name has become synonymous with excellence on the pitch. With
+                            a
+                            record-breaking tenure at FC Barcelona, where he amassed an astonishing collection of titles
+                            and
+                            accolades,
+                            including multiple Ballon d'Or awards, Messi's transition to Paris Saint-Germain in 2021
+                            marked a
+                            significant shift in his illustrious career. Beyond his club achievements, his role in
+                            leading the
+                            Argentine
+                            national team to victory in the 2021 Copa America solidified his legacy as one of the
+                            sport's
+                            all-time
+                            greats, leaving an indelible impact on the beautiful game.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container p-4 mb-4 bg-light rounded">
+                <div class="row">
+                    <div class="col-md-8 col-12">
+                        <p class="lead">Cristiano Ronaldo</p>
+                        <p class="small">Cristiano Ronaldo, born on February 5, 1985, in Funchal, Madeira, Portugal,
+                            stands as one of
+                            the most
+                            recognizable and accomplished figures in the history of soccer. Known for his incredible
+                            athleticism,
+                            exceptional goal-scoring prowess, and unwavering work ethic, Ronaldo has left an indelible
+                            mark on
+                            the
+                            sport. His journey has taken him through illustrious spells with Sporting CP, Manchester
+                            United,
+                            Real
+                            Madrid, Juventus, and a return to Manchester United in 2021. Throughout his career, he has
+                            consistently
+                            shattered records, claimed numerous Ballon d'Or awards, and displayed a remarkable ability
+                            to adapt
+                            his
+                            playing style as he aged, showcasing his versatility as both a winger and a forward. With
+                            his
+                            relentless
+                            drive for success, Ronaldo continues to inspire fans globally and remains a dominant force
+                            on the
+                            field.
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <img src="images/ronaldo.jpg" alt="Cristiano Ronaldo" class="img-fluid rounded-pill">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="container p-4 mb-4 bg-light rounded">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <img src="images/neymar.jpg" alt="Neymar" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-md-8 col-12">
+                        <p class="lead">Neymar</p>
+                        <p class="small">Neymar Jr., born on February 5, 1992, in Mogi das Cruzes, Brazil, is a dynamic
+                            and
+                            electrifying
+                            presence
+                            in
+                            the world of soccer. Renowned for his dazzling dribbling skills, flair, and creativity on
+                            the pitch,
+                            Neymar
+                            rose to prominence with Santos FC in Brazil before making a high-profile move to FC
+                            Barcelona in
+                            2013.
+                            His
+                            partnership with Lionel Messi and Luis Suárez formed the iconic "MSN" trio that led
+                            Barcelona to
+                            numerous
+                            titles, including the UEFA Champions League. In 2017, Neymar transferred to Paris
+                            Saint-Germain
+                            (PSG) in
+                            a
+                            record-breaking deal. His time at PSG has been marked by impressive performances and a
+                            crucial role
+                            in
+                            the
+                            team's success. Neymar's contributions extend to the Brazilian national team, with whom he
+                            has
+                            showcased
+                            his
+                            talents in multiple Copa America and FIFA World Cup tournaments. Despite occasional
+                            controversies,
+                            Neymar's
+                            impact on the game's global stage is undeniable, making him one of the most recognizable and
+                            celebrated
+                            players of his generation.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <a class="text-decoration-none float-end" href="#nav_bar"><kbd>Go to top</kbd></a>
+        </div>
+        <br>
+
+        <div class="container" id="stadiums">
+            <h2>Beautiful stadiums</h2>
+            <hr><br>
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="card text-bg-light">
+                        <img class="card-img-top" src="images/cn.jpg" alt="Camp Nou" class="img-fluid rounded">
+                        <div class="card-body">
+                            <p class="lead">Camp Nou, Barcelona</p>
+                            <p class="small">The Camp Nou stadium is the iconic home of FC Barcelona, one of the world's most renowned football clubs. Located in Barcelona, Spain, it's not only one of the largest football stadiums, but also a symbol of the club's rich history and passionate fan base.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#campnou">Know more</button>
+                            <div id="campnou" class="collapse">
+                                <br>
+                                <p class="small">Camp Nou, situated in the vibrant city of Barcelona, Spain, is one of the most illustrious football stadiums globally, boasting an unparalleled legacy and hosting the renowned FC Barcelona. With a seating capacity exceeding 99,000 spectators, it stands as Europe's largest football stadium, serving as a majestic arena where football magic unfolds. Camp Nou's hallowed grounds have witnessed the mesmerizing skills of legends like Lionel Messi, and its electrifying atmosphere during matches is a testament to the fierce loyalty of Barça's dedicated fans, collectively known as "culés." Beyond its remarkable role in football, Camp Nou stands as an architectural marvel, showcasing modernist design elements that echo Barcelona's artistic heritage. For football enthusiasts and tourists alike, a visit to Camp Nou offers an opportunity to immerse oneself in the spirit of the beautiful game and pay homage to a place that has become synonymous with football greatness.</p>
+                                <p class="small">Stepping into Camp Nou is akin to entering a sanctuary of football devotion. The stadium's history is etched into its very structure, from the echoes of the past that resonate through its corridors to the troves of trophies that have been celebrated on its turf. The Camp Nou Experience allows visitors to explore the club's rich history through its museum, offering glimpses into the club's storied past and showcasing memorabilia that immortalize unforgettable moments. The stadium's aura truly comes alive on matchdays when a sea of passionate fans don the club's iconic colors and chant anthems, creating an atmosphere that reverberates far beyond the field. Camp Nou isn't just a stadium; it's a living embodiment of the spirit of FC Barcelona, a place where dreams have been realized, and where the heart and soul of football continue to thrive.</p>
+                            </div>
+
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card text-bg-light">
+                        <img class="card-img-top" src="images/ot.jpg" alt="Camp Nou" class="img-fluid rounded">
+                        <div class="card-body">
+                            <p class="lead">Old Trafford, Manchester</p>
+                            <p class="small">Old Trafford stadium, located in Manchester, England, is the historic home of Manchester United Football Club, hosting countless memorable matches and moments, and standing as one of football's most iconic and revered arenaswhich was built in 1910.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#oldtrafford">Know more</button>
+                            <div id="oldtrafford" class="collapse">
+                                <br>
+                                <p class="small">Nestled in the heart of Manchester, England, Old Trafford stands as an iconic cathedral of football, encapsulating the rich history and heritage of Manchester United Football Club. With a seating capacity that exceeds 74,000, the stadium exudes an aura of football greatness, having witnessed the triumphs and trials of countless legends. From the "Busby Babes" to the "Class of '92," Old Trafford has been the stage for some of the most pivotal moments in football history. The Stretford End, known for its vocal and passionate support, adds to the stadium's allure, creating an electric atmosphere that encapsulates the very essence of football fandom. The "Theatre of Dreams," as it is affectionately known, has not only hosted memorable matches but has also become a pilgrimage site for fans around the world, eager to experience the hallowed grounds where dreams are made and memories are etched into football folklore.</p>
+                                <p class="small">Beyond its role as a football stadium, Old Trafford is a testament to Manchester United's enduring legacy. The Sir Alex Ferguson Stand pays homage to the club's legendary manager who led United to unprecedented success. The Museum & Tour, a treasure trove of history and memorabilia, offers visitors a chance to delve into the club's storied past, from its humble beginnings to its global prominence. The Munich Tunnel, a poignant reminder of the tragedy that befell the "Busby Babes," serves as a solemn tribute to those who lost their lives in the 1958 Munich air disaster. Whether it's the echoes of Sir Matt Busby's era or the modern-day exploits of players like Cristiano Ronaldo, Old Trafford stands as a living monument to the enduring spirit of Manchester United and the unwavering passion of its fans.</p>
+
+                            </div>
+                            
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <a class="text-decoration-none float-end" href="#nav_bar"><kbd>Go to top</kbd></a>
+        </div>
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container py-3" id="winners">
+            <h2>Recent world cup Winners</h2>
+            <hr><br>
+            <table class="table table-bordered table-striped table-hover text-center">
+                <thead class="table-dark">
+                    <th>Hosts</th>
+                    <th>Winner</th>
+                    <th>Score</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2022 Qatar</td>
+                        <td>Argentina</td>
+                        <td>3-3, then Argentina defeated France 4-2 in penalties</td>
+                    </tr>
+                    <tr>
+                        <td>2018 Russia</td>
+                        <td>France</td>
+                        <td>France 4-2 Croatia</td>
+                    </tr>
+                    <tr>
+                        <td>2014 Brazil</td>
+                        <td>Germany</td>
+                        <td>Germany 1-0 Argentina</td>
+                    </tr>
+                    <tr>
+                        <td>2010 South Africa</td>
+                        <td>Spain</td>
+                        <td>Spain 1-0 Netherlands</td>
+                    </tr>
+                    <tr>
+                        <td>2006 Germany</td>
+                        <td>Italy</td>
+                        <td>1-1, then Italy beat France 5-3 in penalties</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="text-decoration-none float-end" href="#nav_bar"><kbd>Go to top</kbd></a>
+            <br>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Sathiyanarayan Senthilkumar</p>
+
+    </footer>
+
+
+
+</body>
+
+</html>
